@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="droideforms" method="upgrade">
+	<name>Plugin ReCaptcha droide</name>
+	<version>1.0</version>
+	<creationDate>2017-01-12</creationDate>
+	<author>André Luiz</author>
+	<authorEmail>and4563@gmail.com</authorEmail>
+	<authorUrl>http://www.next4.com.br</authorUrl>
+	<copyright>www.next4.com.br</copyright>
+	<license>GNU/GPLv3 or later</license>
+	<description>Plugin que gera um Captha do google no formulário</description>
+	<files>
+		<folder>lib</folder>
+		<filename plugin="droiderecaptcha">droiderecaptcha.php</filename>
+	</files>
+</extension>
