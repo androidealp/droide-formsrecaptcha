@@ -8,9 +8,17 @@
 	<authorUrl>http://www.next4.com.br</authorUrl>
 	<copyright>www.next4.com.br</copyright>
 	<license>GNU/GPLv3 or later</license>
-	<description>Plugin que gera um Captha do google no formulário</description>
+	<description>Plugin que gera um Captha do google no formulário Acesse o link do google para gerar a api www.google.com/recaptcha/admin</description>
 	<files>
 		<folder>lib</folder>
 		<filename plugin="droiderecaptcha">droiderecaptcha.php</filename>
 	</files>
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+							<field name="site_key" type="text" default="" label="Site key" description="Key public Google api recaptcha" />
+							<field name="secret_key" type="text" default="" label="Secret key" description="Key private Google api recaptcha" />
+						</fieldset>
+		</fields>
+	</config>
 </extension>
