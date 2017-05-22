@@ -6,7 +6,7 @@ Plugin para utilizar o [droide-recaptcha](https://github.com/androidealp/droide-
 | Sistema     | Versão       |
 |-------------|--------------|
 |Joomla       | 3.5.x        |
-|Droide Forms |   1.1 (breve)|
+|Droide Forms |   2.x >      |
 |PHP          | 5 >          |
 
 ## Como usar

@@ -17,7 +17,9 @@ class plgDroideformsDroiderecaptcha extends JPlugin{
   public $recaptcha = '';
     public function __construct(&$subject, $config)
      {
-        $this->recaptcha = new DroideRecaptcha($this->params->get('site_key',''), $this->params->get('secret_key',''));
+        // solução do nicollas para as versões recentes do Joomla
+        $params = json_decode($config['params']);
+        $this->recaptcha = new DroideRecaptcha($params->site_key, $params->secret_key);
 
         parent::__construct($subject, $config);
      }
@@ -34,8 +36,6 @@ class plgDroideformsDroiderecaptcha extends JPlugin{
       */
      public function onDroideformsBeforeLayout(&$id_form, &$js, &$params, &$validacao, &$custom_vars)
      {
-       //secret 6LfLohEUAAAAAB6AkDvfy9XN9h_LHIX-7CkhOfYm
-       //$custom_vars['capcha'] = recaptcha_get_html('6LfLohEUAAAAAHT77DLWUDErEPD6ke9zBfTAege1', $this->erros);
        $custom_vars['capcha'] = $this->recaptcha->html();
      }
 
